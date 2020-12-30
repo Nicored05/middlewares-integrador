@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "id": 1,
+  "email": "example@example.com",
+  "password": "$2a$10$YJNmWHie1PjNZKcUNmlq.O.3pmOUidm8w",
+  "avatar": "image-example.jpg"
+ },
+ {
+  "id": 2,
+  "email": "nico@nico.com",
+  "password": "$2a$10$6MgbBA1oJ2hsG.Jozxv6QutJt5FNeltvWssbPHhWBwxgnZrpL.TR2",
+  "avatar": "avatar-1609276730979-FullSizeRender.jpg"
+ },
+ {
+  "id": 3,
+  "email": "nico@n.com",
+  "password": "$2a$10$mhgCuoaIZx7.6fi.WhHGuOcAG5hbsjRWj1y40HTsQ/n3W2R/SQ0s6",
+  "avatar": "avatar-1609283144491-FullSizeRender.jpg"
+ },
+ {
+  "id": 4,
+  "email": "n@n.com",
+  "password": "$2a$10$c/lAAE1UwEApW629X43Qsu/XlF8C3CnPTVR.QPqJZgP6kunInTfkq",
+  "avatar": "avatar-1609283277672-2017-07-02-Despedida-Cavenaghi-00459.jpg"
+ },
+ {
+  "id": 5,
+  "email": "n@r.com",
+  "password": "$2a$10$y/ANS.zlK6FNPUmJuIAKpuWtVJHKZJG80oi3fPun7m6DYLug5tn7C",
+  "avatar": "avatar-1609351804557-IMG_1631.JPG"
+ },
+ {
+  "id": 6,
+  "email": "r@r.com",
+  "password": "$2a$10$E2k0CPSRJn4YTut1cnttLum1xbyFWp3e/KSHC3.l5FO/PQN1no4uG",
+  "avatar": "avatar-1609353760220-IMG_1631.JPG"
+ }
+]

@@ -16,12 +16,17 @@
 				<form action="/user/register" method="POST" enctype="multipart/form-data">
 					<div class="row product-detail">
 						<div class="col-12">
-							<label for="email" class="form-label">Email: *</label>
-							<input type="text" id="email" name="email" placeholder="Ej: example@example.com" class="form-input" value="">
-						</div>
+							<% if(typeof errors == 'undefined') { %>
+								<label for="email" class="form-label">Email: *</label>
+								<input type="text" id="email" name="email" placeholder="Ej: example@example.com" class="form-input" value="">
+							<% } else { %>
+								<label for="email" class="form-label">Email: *</label>
+								<input type="text" id="email" name="email" placeholder="Ej: example@example.com" class="form-input" value="<%= email %>">
+							<% } %>
+					    </div> 
 						<div class="col-12 row">
 							<label for="image" class="form-label col-12">Avatar:</label>
-							<input type="file" id="image" name="avatar" class="form-file col-12">
+							<input type="file" id="image" name="avatar" class="form-file col-12" accept=".jpg,.png,.jpeg">
 						</div>
 						<div class="col-12">
 							<label for="password" class="form-label">Contraseña: *</label>

@@ -11,12 +11,28 @@ const controller = {
 
 		const visitedProducts = products.filter(product => product.category == 'visited');
 		const inSaleProducts = products.filter(product => product.category == 'in-sale');
-
-		return res.render('index', {
-			visitedProducts,
-			inSaleProducts
-		});
-	}
-};
+		
+		let user={};
+        if(req.session.user){
+            user = req.session.user;
+        }
+        
+        if(user == undefined){
+            return res.render('index', {
+				visitedProducts,
+				inSaleProducts
+				
+		
+        })} else{
+            return res.render('index', {
+				visitedProducts,
+				inSaleProducts,
+				id:user.id,
+				email: user.email,
+				image: user.image
+		
+			})
+		}
+	}}
 
 module.exports = controller;

@@ -17,12 +17,30 @@
 				<form action="/user/login/" method="POST">
 					<div class="row product-detail">
 						<div class="col-12">
-							<label for="email" class="form-label">Email:</label>
-							<input type="text" id="email" name="email" placeholder="Ej: example@example.com" class="form-input" value="">
+
+							<% if(typeof errors != 'undefined' && errors[0].msg=='Credenciales invalidas') {%>
+								<p class="errors-login"><%= errors[0].msg %></p>
+							<% } %>
+								<label for="email" class="form-label">Email:</label>
+								<input type="text" id="email" name="email" placeholder="Ej: example@example.com" class="form-input" value="">
+							<% if( typeof errors != 'undefined') { %>
+								<% for (error of errors) { %>
+									<% if(error.param == 'email') { %>
+										<p class="errors-login"><%= error.msg %></p>
+									<% } %>	
+								<% } %>
+							<% } %> 
 						</div>
 						<div class="col-12">
 							<label for="price" class="form-label">Contraseña:</label>
 							<input type="password" id="password" name="password" class="form-input">
+							<% if( typeof errors != 'undefined') { %>
+								<% for (error of errors) { %>
+									<% if(error.param == 'password') { %>
+										<p class="errors-login"><%= error.msg %></p>
+									<% } %>	
+								<% } %>
+							<% } %> 
 						</div>
 						<div class="col-12">
 							<label for="remember" class="form-label">Recuérdame</label>
